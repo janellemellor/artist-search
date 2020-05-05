@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Paging = ({ handlePageChange, page, artistResults }) => (
+const Paging = ({ onPageChange, page, artistResults }) => (
   <section> 
-    <button onClick={() => handlePageChange(-25)} disabled={page === 0}>&lt;</button>
-    <button onClick={() => handlePageChange(25)} disabled={artistResults.length < 25}>&gt;</button>
+    <button onClick={() => onPageChange(-25)} disabled={page === 0}>&lt;</button>
+    <button onClick={() => onPageChange(25)} disabled={artistResults.length < 25}>&gt;</button>
   </section>  
 );
 
 Paging.propTypes = {
-  handlePageChange: PropTypes.func.isRequired,
+  onPageChange: PropTypes.func.isRequired,
   page: PropTypes.number.isRequired,
   artistResults: PropTypes.array.isRequired
 };
