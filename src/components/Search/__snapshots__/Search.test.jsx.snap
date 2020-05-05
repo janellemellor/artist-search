@@ -7,7 +7,7 @@ exports[`Search Component matches a snapshot 1`] = `
   >
     <fieldset>
       <input
-        name="Grouper"
+        name="artist-search"
         onChange={[Function]}
         type="text"
         value="Grouper"
