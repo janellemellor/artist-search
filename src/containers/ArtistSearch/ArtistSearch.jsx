@@ -8,23 +8,16 @@ import Paging from '../../components/Paging/Paging.jsx';
 const ArtistSearch = () => {
   const [artistSearchQuery, setArtistSearchQuery] = useState('');
   const [artistResults, setArtistResults] = useState([]);
-  const [page, setPage] = useState(0);
+  const [offset, setOffset] = useState(0);
 
   const history = useHistory();
   const { querySearch }  = useParams();
 
   useEffect(() => {
-    if(querySearch)
-      fetchArtists(querySearch)
+    if(querySearch) {
+      fetchArtists(querySearch, offset)
         .then(res => setArtistResults(res));
-  }, [querySearch]);
-
-  useEffect(() => {
-    if(page > 0) {
-      fetchArtists(artistSearchQuery, page)
-        .then(res => setArtistResults(res));
-    }
-  }, [page]);
+    }}, [querySearch, offset]);
 
   const handleChange = ({ target }) => {
     setArtistSearchQuery(target.value);
@@ -35,13 +28,13 @@ const ArtistSearch = () => {
     history.push(`/${artistSearchQuery}`);
   }; 
 
-  const handlePageChange = (by) => { setPage(prevPage => prevPage + by);
+  const handlePageChange = (by) => { setOffset(prevPage => prevPage + by);
   };
 
   return (
     <>      
       <Search onSubmit={handleSubmit} onChange={handleChange} searchInput={artistSearchQuery} />
-      <Paging onPageChange={handlePageChange} page={page} artistResults={artistResults} />
+      <Paging onPageChange={handlePageChange} offset={offset} artistResults={artistResults} />
       <Artists artistResults={artistResults} />
     </>
   );
