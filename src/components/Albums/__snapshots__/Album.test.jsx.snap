@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album Component matches a snapshot 1`] = `
+<section>
+  <Link
+    to="/undefined/undefined"
+  >
+    <h3 />
+    <img />
+  </Link>
+</section>
+`;
