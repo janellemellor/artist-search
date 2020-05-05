@@ -7,6 +7,7 @@ import { fetchArtists } from '../../services/getArtistData.js';
 const ArtistSearch = () => {
   const [artistSearchQuery, setArtistSearchQuery] = useState('');
   const [artistResults, setArtistResults] = useState([]);
+  const [page, setPage] = useState(0);
 
   const history = useHistory();
   const { querySearch }  = useParams();
@@ -26,6 +27,16 @@ const ArtistSearch = () => {
     history.push(`/${artistSearchQuery}`);
   }; 
 
+  //   const handlePageChange = (by) => { setPage(prevPage => prevPage + by);
+  // };
+
+  // useEffect(() => {
+  //   if(page > 0) {
+  //     fetchArtists(artistSearchQuery, page)
+  //       .then(res => setArtistResults(res));
+  //   }
+  // }, [page]);
+
   return (
     <>      
       <Search onSubmit={handleSubmit} onChange={handleChange} searchInput={artistSearchQuery} />
@@ -35,3 +46,4 @@ const ArtistSearch = () => {
 };
 
 export default ArtistSearch;
+
