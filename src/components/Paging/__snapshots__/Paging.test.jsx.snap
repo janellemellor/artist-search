@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paging component matches the Paging snapshot 1`] = `
+<section>
+  <button
+    disabled={false}
+    onClick={[Function]}
+  >
+    &lt;
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    &gt;
+  </button>
+</section>
+`;
