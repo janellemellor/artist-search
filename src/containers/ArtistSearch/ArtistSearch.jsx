@@ -14,7 +14,7 @@ const ArtistSearch = () => {
     e.preventDefault();
     fetchArtists(artistNameInput)
       .then(res => setArtistResults(res));
-  }; console.log(artistResults);
+  }; 
 
    
   return (
