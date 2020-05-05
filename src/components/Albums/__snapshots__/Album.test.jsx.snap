@@ -3,10 +3,15 @@
 exports[`Album Component matches a snapshot 1`] = `
 <section>
   <Link
-    to="/undefined/undefined"
+    to="/Opiate/002fe68d-3414-4925-a9a6-bc9bc6336b06"
   >
-    <h3 />
-    <img />
+    <h3>
+      Opiate
+    </h3>
+    <img
+      alt="Opiate"
+      src="https://placedog.net/640/480?random"
+    />
   </Link>
 </section>
 `;
