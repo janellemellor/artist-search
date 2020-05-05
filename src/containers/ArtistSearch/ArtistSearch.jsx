@@ -5,16 +5,17 @@ import { fetchArtists } from '../../services/getArtistData.js';
 
 const ArtistSearch = () => {
   const [artistNameInput, setArtistNameInput] = useState('');
-  const [artistName, setArtistName] = useState('');
+  const [artistResults, setArtistResults] = useState([]);
+
+  const handleChange = ({ target }) => setArtistNameInput(target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchArtists(artistName)
-      .then(res => setArtistName(res));
-    console.log(artistName);
+    fetchArtists(artistNameInput)
+      .then(res => setArtistResults(res));
   }; 
+  console.log(artistResults);
 
-  const handleChange = ({ target }) => setArtistNameInput(target.value);
    
   return (
     <>

@@ -1,6 +1,6 @@
 import React from 'react';
+import ArtistSearch from '../../containers/ArtistSearch/ArtistSearch.jsx';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return < ArtistSearch />;
 }
-  
