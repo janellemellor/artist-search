@@ -5,7 +5,7 @@ export const Search = ({ onSubmit, onChange, searchInput }) => (
   <>
     <form onSubmit={onSubmit}>
       <fieldset>
-        <input type="text" name={searchInput} value={searchInput} onChange={onChange}  />
+        <input type="text" name="artist-search" value={searchInput} onChange={onChange}  />
         <button>Find Artist!</button>
       </fieldset>
     </form>
