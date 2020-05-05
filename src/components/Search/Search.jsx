@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Search = ({ onSubmit, onChange, searchInput }) => (
+export const Search = ({ onSubmit, onChange }) => (
   <>
     <form onSubmit={onSubmit}>
       <fieldset>
-        <input type="text" name={searchInput} value={searchInput} onChange={onChange}  />
+        <input type="text" name="artist-search" value="name" onChange={onChange}  />
         <button>Find Artist!</button>
       </fieldset>
     </form>
@@ -15,7 +15,6 @@ export const Search = ({ onSubmit, onChange, searchInput }) => (
 Search.propTypes = {
   onSubmit: PropTypes.func.isRequired, 
   onChange: PropTypes.func.isRequired, 
-  searchInput: PropTypes.string.isRequired
 };
 
 export default Search;
