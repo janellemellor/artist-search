@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artists matches the Artists snapshot 1`] = `
+<ul>
+  <li
+    key="a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432"
+  >
+    <Link
+      to="/a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432"
+    >
+      <Artist
+        id="a3cb23fc-acd3-4ce0-8f36-1e5aa6a18432"
+        name="U2"
+      />
+    </Link>
+  </li>
+  <li
+    key="b613c677-42e5-47e8-abcd-820c48f17447"
+  >
+    <Link
+      to="/b613c677-42e5-47e8-abcd-820c48f17447"
+    >
+      <Artist
+        id="b613c677-42e5-47e8-abcd-820c48f17447"
+        name="U2 Zoo"
+      />
+    </Link>
+  </li>
+</ul>
+`;
