@@ -11,6 +11,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path ="/" component={ArtistSearch} />
+        <Route exact path="/:querySearch" component={ArtistSearch} />
       </Switch>
     </Router>
   );
