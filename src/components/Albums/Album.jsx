@@ -6,7 +6,7 @@ const Album = ({ title, id, coverArt }) => (
   <section>
     <Link to={`/${title}/${id}`} >
       <h3>{title}</h3>
-      <img src={coverArt} alt={title} />
+      <img src={coverArt} alt={title} height="350" width="350" />
     </Link>
   </section>
 );

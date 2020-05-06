@@ -13,6 +13,11 @@ exports[`App component renders App 1`] = `
       exact={true}
       path="/:querySearch"
     />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/:artist/:id"
+    />
   </Switch>
 </BrowserRouter>
 `;

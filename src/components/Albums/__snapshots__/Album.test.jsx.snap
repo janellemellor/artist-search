@@ -10,7 +10,9 @@ exports[`Album Component matches a snapshot 1`] = `
     </h3>
     <img
       alt="Opiate"
+      height="350"
       src="https://placedog.net/640/480?random"
+      width="350"
     />
   </Link>
 </section>

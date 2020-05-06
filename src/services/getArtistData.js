@@ -13,6 +13,6 @@ export const fetchAlbums = (artistId, offset) => {
     .then(json => json.releases.map(release => ({
       id: release.id,
       title: release.title,
-      coverArt: release['cover-art-archive'].front ? `http://coverartarchive.org/release/${release.id}/front` : 'https://placedog.net/640/480?random'
+      coverArt: release['cover-art-archive'].front ? `http://coverartarchive.org/release/${release.id}/front` : 'https://placedog.net/350/350?random'
     })));
 };
