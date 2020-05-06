@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Album = ({ title, id, coverArt }) => (
   <section>
-    <h3>Album Results</h3>
     <Link to={`/${title}/${id}`} >
       <h3>{title}</h3>
       <img src={coverArt} alt={title} />

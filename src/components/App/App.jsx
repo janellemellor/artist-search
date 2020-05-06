@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 import ArtistSearch from '../../containers/ArtistSearch/ArtistSearch.jsx';
-import AlbumDisplay from '../../containers/AlbumDisplay.jsx';
+import AlbumDisplay from '../../containers/AlbumDisplay/AlbumDisplay.jsx';
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
       <Switch>
         <Route exact path ="/" component={ArtistSearch} />
         <Route exact path="/:querySearch" component={ArtistSearch} />
-        <Route exact path="/:title/:id" component={AlbumDisplay}/>
+        <Route exact path="/:artist/:id" component={AlbumDisplay}/>
       </Switch>
     </Router>
   );

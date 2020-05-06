@@ -8,19 +8,19 @@ const AlbumDisplay = () => {
   const [offset, setOffset] = useState(0);
   const [albumResults, setAlbumResults] = useState([]);
 
-  const { artist } = useParams();
+  const { id } = useParams();
   
   useEffect(() => {
-    fetchAlbums(artist, offset)
+    fetchAlbums(id, offset)
       .then(res => setAlbumResults(res));
-  }, [artist, offset]);
+  }, [offset]);
 
   const handlePageChange = (by) => { setOffset(prevPage => prevPage + by);
   };
 
   return (
     <>  
-      <Paging onPageChange={handlePageChange} offset={offset} albumResults={albumResults} />
+      <Paging onPageChange={handlePageChange} offset={offset} artistResults={albumResults} />
       <Albums albumResults={albumResults} /> 
     </>
   );
